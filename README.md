@@ -3,15 +3,20 @@
 This extension:
 
 - Adds a Verified checkmark next to everybody's name on Twitter.
-- Changes the message shown when clicking on the source of a user's Twitter account.
+- Removes the pop-up when clicking on the Verified checkmark so you can't tell who is actually verified.
 
 It does not affect any search rankings or add any other features found in Twitter Blue.
 
-> This extension is a work in progress.
-
 ## Build Instructions
 
-TBD.
+With Node installed:
+
+```shell
+npm installl
+npm run build
+```
+
+Then you can load the extension in Chrome by going to `chrome://extensions` and loading the repo.
 
 ## Disclaimer
 

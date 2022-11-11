@@ -34,7 +34,6 @@ const pageNavigationObserver = new MutationObserver(() => handlePageChange());
 const lazyLoadObserver = new MutationObserver(addVerifiedElementsToTweets);
 
 const waitUntilUserPageLoadsThenVerify = (): void => {
-  console.log('mut')
   // Also needs to disconnect if the page isn't for the user.
 
   const targetElement = document.querySelector(SELECTOR_FOR_USER_HEADER_CONTAINER);

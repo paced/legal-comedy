@@ -4,8 +4,7 @@
   "description": "Power to the people! Add a Verified checkmark to everybody on Twitter.",
   "version": "0.1.0",
   "action": {
-    "default_icon": "public/icon.png",
-    "default_popup": "public/popup.html"
+    "default_icon": "public/icon.png"
   },
   "content_scripts": [
     {
