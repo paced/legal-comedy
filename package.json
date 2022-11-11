@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "A Chrome extension to add a Verified checkmark to every Twitter user.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "tsc; esbuild build/main.js --bundle --outfile=dist/main.cjs",
     "format": "prettier --write \"src/**/*.{ts}\""
   },
   "license": "MIT",
@@ -14,6 +16,7 @@
   "devDependencies": {
     "@types/chrome": "0.0.158",
     "copy-webpack-plugin": "^9.0.1",
+    "esbuild": "^0.15.13",
     "glob": "^7.1.6",
     "prettier": "^2.2.1",
     "ts-loader": "^8.0.0",

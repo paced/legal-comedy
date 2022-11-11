@@ -4,6 +4,7 @@
 **/cache/
 **/secrets/
 **/dist/
+**/build/
 **/out/
 **/lib/
 **/coverage/
