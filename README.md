@@ -19,3 +19,6 @@ This is a satirical statement about Twitter and not an attempt at circumventing 
 example of free speech, something that Twitter claims to support.
 
 This extension has no affiliation with Twitter, Inc. or any of its subsidiaries.
+
+This was a speedrun hackathon project of sorts, and support as Twitter changes is not guaranteed. Feel free to report 
+bugs if you see them, though.
