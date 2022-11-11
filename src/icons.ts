@@ -10,7 +10,7 @@ export const userVerifiedElement: string = `
       aria-label="Provides details about verified accounts." role="button"
       tabindex="0"
       class="css-18t94o4 css-1dbjc4n r-6koalj r-9cviqr r-1ny4l3l r-o7ynqc r-6416eg"
-      style="margin-left: 2px;"
+      style="margin-left: 2px; color: rgb(214, 217, 219) !important;"
     >
        <svg
          viewBox="0 0 24 24" aria-label="Verified account" role="img"
@@ -27,7 +27,7 @@ export const tweetVerifiedSvg: string = `
   <svg
     viewBox="0 0 24 24" aria-label="Verified account" role="img"
     class="r-13v1u17 r-4qtqp9 r-yyyyoo r-1xvli5t r-9cviqr r-f9ja8p r-og9te1 r-bnwqim r-1plcrui r-lrvibr"
-    style="margin-left: 2px;"
+    style="margin-left: 2px; color: rgb(214, 217, 219) !important;"
   >
     ${innerSvg}
   </svg>
