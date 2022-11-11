@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-typescript-starter",
-  "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
+  "name": "legal-comedy",
+  "version": "0.1.0",
+  "description": "A Chrome extension to add a Verified checkmark to every Twitter user.",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
@@ -10,24 +10,15 @@
     "test": "npx jest",
     "style": "prettier --write \"src/**/*.{ts,tsx}\""
   },
-  "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
-  },
-  "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "url": "https://github.com:teaminkling/legal-comedy.git"
   },
   "devDependencies": {
     "@types/chrome": "0.0.158",
-    "@types/jest": "^27.0.2",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "glob": "^7.1.6",
-    "jest": "^27.2.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2 ",
     "ts-jest": "^27.0.5",
