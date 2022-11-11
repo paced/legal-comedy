@@ -1,0 +1,24 @@
+.idea/
+.vscode/
+.DS_Store
+**/cache/
+**/secrets/
+**/dist/
+**/out/
+**/lib/
+**/coverage/
+**/target/
+!**/.gitkeep
+**/*.log
+**/.env
+
+## Common
+
+.next/
+npm-debug.log
+**/node_modules/
+.nyc_output
+*.tsbuildinfo
+**/wrangler.toml
+
+## Project Specific
