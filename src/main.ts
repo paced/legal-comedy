@@ -1,14 +1,10 @@
 import {
   SELECTOR_FOR_PAGE_NAVIGATION,
   SELECTOR_FOR_ROOT_STATIC_ELEMENT,
-  SELECTOR_FOR_TWEETS_CONTAINER
+  SELECTOR_FOR_TWEETS_CONTAINER,
+  SELECTOR_FOR_USER_HEADER_CONTAINER,
 } from "./constants";
 import {tweetVerifiedSvg, userVerifiedElement} from "./icons";
-
-const addVerifiedIcons = (): void => {
-  addVerifiedElementsToUserPage();
-  addVerifiedElementsToTweets();
-};
 
 const addVerifiedElementsToUserPage = (): void => {
   const targetSpan: Element | undefined =
@@ -27,6 +23,7 @@ const addVerifiedElementsToTweets = (): void => {
   });
 };
 
+const userHeaderObserver = new MutationObserver(() => waitUntilUserPageLoadsThenVerify())
 const refreshOrFirstLoadFirstTweetObserver = new MutationObserver(
   () => waitUntilTweetsLoadedThenAddObservers(true, true),
 );
@@ -34,7 +31,19 @@ const alreadyLoadedFirstTweetObserver = new MutationObserver(
   () => waitUntilTweetsLoadedThenAddObservers(false, true),
 );
 const pageNavigationObserver = new MutationObserver(() => handlePageChange());
-const lazyLoadObserver = new MutationObserver(addVerifiedIcons);
+const lazyLoadObserver = new MutationObserver(addVerifiedElementsToTweets);
+
+const waitUntilUserPageLoadsThenVerify = (): void => {
+  console.log('mut')
+  // Also needs to disconnect if the page isn't for the user.
+
+  const targetElement = document.querySelector(SELECTOR_FOR_USER_HEADER_CONTAINER);
+  if (targetElement) {
+    addVerifiedElementsToUserPage();
+
+    userHeaderObserver.disconnect();
+  }
+};
 
 const waitUntilTweetsLoadedThenAddObservers = (
   addPageNavigationObserver: boolean, addLazyLoadObserver: boolean,
@@ -55,19 +64,29 @@ const waitUntilTweetsLoadedThenAddObservers = (
       lazyLoadObserver.observe(document.querySelector(SELECTOR_FOR_TWEETS_CONTAINER)!, {childList: true});
     }
 
-    addVerifiedIcons();
+    addVerifiedElementsToTweets();
 
+    userHeaderObserver.disconnect();
     refreshOrFirstLoadFirstTweetObserver.disconnect();
     alreadyLoadedFirstTweetObserver.disconnect();
   }
 };
 
 const handlePageChange = (): void => {
+  userHeaderObserver.disconnect();
+  userHeaderObserver.observe(
+    document.querySelector(SELECTOR_FOR_ROOT_STATIC_ELEMENT)!, {childList: true, subtree: true}
+  );
+
   alreadyLoadedFirstTweetObserver.disconnect();
   alreadyLoadedFirstTweetObserver.observe(
     document.querySelector(SELECTOR_FOR_ROOT_STATIC_ELEMENT)!, {childList: true, subtree: true}
   );
 };
+
+userHeaderObserver.observe(
+  document.querySelector(SELECTOR_FOR_ROOT_STATIC_ELEMENT)!, {childList: true, subtree: true},
+);
 
 refreshOrFirstLoadFirstTweetObserver.observe(
   document.querySelector(SELECTOR_FOR_ROOT_STATIC_ELEMENT)!, {childList: true, subtree: true}

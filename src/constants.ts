@@ -1,4 +1,9 @@
 /**
+ * The selector for the user header on a user's page.
+ */
+export const SELECTOR_FOR_USER_HEADER_CONTAINER = "div[data-testid='UserName']";
+
+/**
  * The selector for the parent of all Tweets.
  */
 export const SELECTOR_FOR_TWEETS_CONTAINER = "main div[tabindex='0'] div section div div";
