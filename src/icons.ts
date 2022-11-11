@@ -27,6 +27,7 @@ export const tweetVerifiedSvg: string = `
   <svg
     viewBox="0 0 24 24" aria-label="Verified account" role="img"
     class="r-13v1u17 r-4qtqp9 r-yyyyoo r-1xvli5t r-9cviqr r-f9ja8p r-og9te1 r-bnwqim r-1plcrui r-lrvibr"
+    style="margin-left: 2px;"
   >
     ${innerSvg}
   </svg>
