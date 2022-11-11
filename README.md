@@ -1,23 +1,21 @@
-# base
+# Legal Comedy Chrome Extension
 
-> **Warning**: This repository is not ready for use and should be ignored for now.
+This extension:
 
-## Introduction
+- Adds a Verified checkmark next to everybody's name on Twitter.
+- Changes the message shown when clicking on the source of a user's Twitter account.
 
-> Describe the "why" of your GitHub project here.
+It does not affect any search rankings or add any other features found in Twitter Blue.
 
-Base template for all repositories without a better template.
+> This extension is a work in progress.
 
 ## Build Instructions
 
-Describe exactly how to build this project from scratch.
+TBD.
 
-## Deploy
+## Disclaimer
 
-Describe at least how _you_ are deploying this project, so you can do it again.
+This is a satirical statement about Twitter and not an attempt at circumventing its paid products. It is a classic 
+example of free speech, something that Twitter claims to support.
 
-## To-Do
-
-- [ ] **Check the license!**
-- [ ] Finish/edit this README file.
-- [ ] Add/edit any and all badges associated with this project.
+This extension has no affiliation with Twitter, Inc. or any of its subsidiaries.
