@@ -18,7 +18,12 @@ const addVerifiedElementsToTweets = (): void => {
   [...document.getElementsByTagName("article")].forEach(tweet => {
     const authorText: NodeListOf<Element> = tweet.querySelectorAll("div[dir='auto']");
     if (authorText) {
-      authorText[1].innerHTML = tweetVerifiedSvg.trim();
+      let checkmarkContainer = authorText[1];
+      if (checkmarkContainer.getElementsByTagName("span").length > 0) {
+        checkmarkContainer = authorText[2];
+      }
+
+      checkmarkContainer.innerHTML = tweetVerifiedSvg.trim();
     }
   });
 };
