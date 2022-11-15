@@ -14,7 +14,7 @@
     "url": "https://github.com:teaminkling/legal-comedy.git"
   },
   "devDependencies": {
-    "@types/chrome": "0.0.158",
+    "@types/chrome": "0.0.202",
     "copy-webpack-plugin": "^9.0.1",
     "esbuild": "^0.15.13",
     "glob": "^7.1.6",
