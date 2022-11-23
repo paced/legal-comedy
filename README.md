@@ -1,5 +1,8 @@
 # Legal Comedy Chrome Extension
 
+> **Note:** Since Twitter no longer allows purchasing the Verified checkmark via Twitter Blue and is likely going to
+> go kaput without changes as of writing this, I'm not going to maintain this anymore.
+
 This extension:
 
 - Adds a Verified checkmark next to everybody's name on Twitter.
